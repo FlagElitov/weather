@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather/bloc/global_bloc.dart';
 import 'package:weather/core/theme.dart';
-import 'package:weather/home.dart';
+import '../home.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class WeatherApp extends StatelessWidget {
   @override
@@ -11,6 +12,9 @@ class WeatherApp extends StatelessWidget {
       create: (context) => GlobalBloc()..add(InitStateEvent()),
       child: MaterialApp(
         title: 'Weather',
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        localizationsDelegates: context.localizationDelegates,
         debugShowCheckedModeBanner: false,
         theme: AppTheme.theme,
         home: MyHomeScreen(),
