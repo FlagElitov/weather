@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather/models/weather_forecast_card_model.dart';
 import 'package:weather/utils/convert_date.dart';
 import 'package:weather/widgets/weather_forecast_card/card_bloc/card_bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class ColumnsWidget extends StatelessWidget {
   final WeatherForecastCardModel model;
@@ -27,22 +28,22 @@ class ColumnsWidget extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          columnData(
+          _columnData(
             first: convertDate(model.date),
-            firstName: "Date:",
+            firstName: "${"date".tr()}:",
             second: model.temperature.toString(),
-            secondName: "Temperature:",
+            secondName: "${"temperature".tr()}:",
             third: model.weather.toString(),
-            thirdName: "Weather:",
+            thirdName: "${"weather".tr()}:",
             down: cardProvider.down,
           ),
-          columnData(
+          _columnData(
             first: model.clouds.toString(),
-            firstName: "Cloudy:",
+            firstName: "${"cloudy".tr()}:",
             second: model.windSpeed.toString(),
-            secondName: "Wind Speed:",
+            secondName: "${"windSpeed".tr()}:",
             third: model.weatherDescription.toString(),
-            thirdName: "Description:",
+            thirdName: "${"description".tr()}:",
             down: cardProvider.down,
           )
         ],
@@ -51,7 +52,7 @@ class ColumnsWidget extends StatelessWidget {
   }
 }
 
-Widget columnData(
+Widget _columnData(
     {required String first,
     required String firstName,
     required String second,
