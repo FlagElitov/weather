@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather/bloc/global_bloc.dart';
 import 'package:weather/widgets/dropdown_widget.dart';
 import 'package:weather/widgets/weather_forecast_card/weather_forecast_card.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -12,13 +13,13 @@ class MainScreen extends StatelessWidget {
         GlobalBloc provider = BlocProvider.of<GlobalBloc>(context);
         return Scaffold(
           appBar: AppBar(
-            title: Text('Main Page'),
+            title: Text('mainPage'.tr()),
             centerTitle: true,
             actions: [
               DropDownWidget(
                 dropDown: [
-                  'Погодинно',
-                  'Поденно',
+                  'hourly'.tr(),
+                  'daily'.tr(),
                 ],
               ),
             ],

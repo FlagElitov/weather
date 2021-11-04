@@ -15,10 +15,28 @@ class CodegenLoader extends AssetLoader{
   }
 
   static const Map<String,dynamic> en = {
-  "hello": "Hello"
+  "windy": "Windy",
+  "date": "Date",
+  "temperature": "Temperature",
+  "cloudy": "Cloudy",
+  "windSpeed": "Wind Speed",
+  "weather": "Weather",
+  "description": "Description",
+  "mainPage": "Main Page",
+  "daily": "Daily",
+  "hourly": "Hourly"
 };
 static const Map<String,dynamic> ru = {
-  "hello": "Привіт"
+  "windy": "Ветряно",
+  "date": "Дата",
+  "temperature": "Температура",
+  "cloudy": "Облачно",
+  "windSpeed": "Скорость ветра",
+  "weather": "Погода",
+  "description": "Описание",
+  "mainPage": "Главная страница",
+  "daily": "Ежедневно",
+  "hourly": "Почасово"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ru": ru};
 }
