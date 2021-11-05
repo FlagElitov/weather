@@ -4,7 +4,6 @@ class AppTheme {
   static ThemeData get theme {
     return ThemeData(
       primaryColor: Colors.blue,
-      accentColor: Colors.blue,
       visualDensity: VisualDensity.adaptivePlatformDensity,
     );
   }

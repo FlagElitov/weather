@@ -1,0 +1,13 @@
+{
+  "windy": "Windy",
+  "date": "Date",
+  "temperature": "Temperature",
+  "cloudy": "Cloudy",
+  "windSpeed": "Wind Speed",
+  "weather": "Weather",
+  "description": "Description",
+  "mainPage": "Main Page",
+  "daily": "Daily",
+  "hourly": "Hourly",
+  "checkInternetConnected":"Check internet connected"
+}

@@ -1,0 +1,13 @@
+{
+  "windy": "Ветряно",
+  "date": "Дата",
+  "temperature": "Температура",
+  "cloudy": "Облачно",
+  "windSpeed": "Скорость ветра",
+  "weather": "Погода",
+  "description": "Описание",
+  "mainPage": "Главная страница",
+  "daily": "Ежедневно",
+  "hourly": "Почасово",
+  "checkInternetConnected": "Проверьте подключение к интернету"
+}
