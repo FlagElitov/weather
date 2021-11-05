@@ -30,7 +30,7 @@ class GlobalBloc extends Bloc<GlobalEvent, GlobalState> {
   ) async* {
     if (event is InitStateEvent) {
       this.lang = event.lang;
-      NavigatorOnMainPage();
+      navigatorOnMainPage();
       getAllData();
     }
 
@@ -43,7 +43,7 @@ class GlobalBloc extends Bloc<GlobalEvent, GlobalState> {
     }
   }
 
-  void NavigatorOnMainPage() {
+  void navigatorOnMainPage() {
     Future.delayed(Duration(seconds: 3), () => {add(ShowMainScreenEvent())});
   }
 
@@ -51,7 +51,7 @@ class GlobalBloc extends Bloc<GlobalEvent, GlobalState> {
     this.weatherForecast = await getCache();
     if (weatherForecast != null) isLoading = false;
     isEmptyCache = weatherForecast == null;
-    NavigatorOnMainPage();
+    navigatorOnMainPage();
   }
 
   Future<void> getAllData() async {
@@ -73,7 +73,7 @@ class GlobalBloc extends Bloc<GlobalEvent, GlobalState> {
             this.weatherForecast = data;
             isLoading = false;
             setCache(weatherForecast!);
-            NavigatorOnMainPage();
+            navigatorOnMainPage();
           },
         );
       } else {
