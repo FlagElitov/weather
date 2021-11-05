@@ -1,5 +1,3 @@
-import 'package:intl/intl.dart';
-
 class WeatherForecastCardModel {
   late num temperature;
   late String weather;
@@ -8,22 +6,14 @@ class WeatherForecastCardModel {
   late num windSpeed;
   late num clouds;
   late DateTime date;
-  late WeatherForecastType weatherForecastType;
 
-  WeatherForecastCardModel.fromJson(
-      {required Map data, required WeatherForecastType type}) {
-  
-    this.temperature =
-        type == WeatherForecastType.daily ? data["temp"]["day"] : data["temp"];
+  WeatherForecastCardModel.fromJson({required Map data}) {
+    this.temperature = data["main"]["temp"];
     this.weather = data["weather"][0]["main"];
     this.weatherDescription = data["weather"][0]["description"];
     this.weatherIcon = data["weather"][0]["icon"];
-    this.windSpeed = data["wind_speed"];
-    this.clouds = data["clouds"];
-    
-    this.date = DateTime.fromMillisecondsSinceEpoch(data['dt']);
-    this.weatherForecastType = type;
+    this.windSpeed = data["wind"]['speed'];
+    this.clouds = data["clouds"]["all"];
+    this.date = DateTime.parse(data['dt_txt']);
   }
 }
-
-enum WeatherForecastType { daily, hourly }

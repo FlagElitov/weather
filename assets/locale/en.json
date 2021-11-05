@@ -8,5 +8,6 @@
   "description": "Description",
   "mainPage": "Main Page",
   "daily": "Daily",
-  "hourly": "Hourly"
+  "hourly": "Hourly",
+  "checkInternetConnected":"Check internet connected"
 }

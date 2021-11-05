@@ -8,8 +8,9 @@ import 'package:easy_localization/easy_localization.dart';
 class WeatherApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    String lang = context.locale.toString();
     return BlocProvider(
-      create: (context) => GlobalBloc()..add(InitStateEvent()),
+      create: (context) => GlobalBloc()..add(InitStateEvent(lang: lang)),
       child: MaterialApp(
         title: 'Weather',
         supportedLocales: context.supportedLocales,

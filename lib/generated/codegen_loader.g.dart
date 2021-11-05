@@ -24,7 +24,8 @@ class CodegenLoader extends AssetLoader{
   "description": "Description",
   "mainPage": "Main Page",
   "daily": "Daily",
-  "hourly": "Hourly"
+  "hourly": "Hourly",
+  "checkInternetConnected": "Check internet connected"
 };
 static const Map<String,dynamic> ru = {
   "windy": "Ветряно",
@@ -36,7 +37,8 @@ static const Map<String,dynamic> ru = {
   "description": "Описание",
   "mainPage": "Главная страница",
   "daily": "Ежедневно",
-  "hourly": "Почасово"
+  "hourly": "Почасово",
+  "checkInternetConnected": "Проверьте подключение к интернету"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ru": ru};
 }

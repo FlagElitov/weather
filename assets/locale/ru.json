@@ -8,5 +8,6 @@
   "description": "Описание",
   "mainPage": "Главная страница",
   "daily": "Ежедневно",
-  "hourly": "Почасово"
+  "hourly": "Почасово",
+  "checkInternetConnected": "Проверьте подключение к интернету"
 }

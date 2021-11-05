@@ -12,4 +12,9 @@ class ChangePeriodEvent extends GlobalEvent {
 
 class ShowMainScreenEvent extends GlobalEvent {}
 
-class InitStateEvent extends GlobalEvent {}
+class InitStateEvent extends GlobalEvent {
+  final String lang;
+  InitStateEvent({required this.lang});
+
+  List<Object> get props => [lang];
+}
